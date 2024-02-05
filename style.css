@@ -1,0 +1,115 @@
+/*
+
+TODO: custom greenish selection color
+
+*/
+
+:root {
+	color-scheme: dark;
+	background-color: #1d2021;
+}
+
+:root, body {
+	background-color: #1d2021;
+/*	font-family: "Roboto";*/
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.row,
+.col {
+	display: flex;
+}
+.col {
+	flex-direction: column;
+}
+
+.cen {
+	align-items: center;
+}
+
+.header {
+	padding: 30px 0 0 0;
+	margin-bottom: 35px;
+}
+
+.flow {
+	padding: 0 13px;
+}
+
+.img-container {
+	display: flex;
+	align-items: center;
+}
+
+.my-name {
+	font-family: sans-serif;
+	font-size: 26px;
+	margin-top: 9px;
+	font-weight: 300;
+}
+
+.nick {
+	font-family: monospace;
+	font-size: 14px;
+	margin-top: 10px;
+	font-weight: 200;
+}
+
+.img-container > img {
+	widows: 140px;
+	height: 140px;
+	border-radius: 50%;
+}
+
+.nick-text,
+.titles h1, 
+.titles h3 {
+	text-align: center;
+}
+
+.links {
+	min-width: 300px;
+/*	max-width: 980px;*/
+	gap: 9px;
+}
+
+.link img.icon {
+	width: 32px;
+	height: 32px;
+/*	background-color: #EFD789;*/
+}
+
+.link {
+	font-size: 18px;
+	text-decoration: none;
+	color: #EFD789;
+	border-radius: 3px;
+	padding-right: 9px;
+	background: linear-gradient(to left, hsla(160deg, 6%, 40%, 0.2), hsl(160deg, 6%, 40%, 0) 80%);
+	transition: 200ms;
+}
+.link:hover{
+	background-color: hsla(160deg, 6%, 40%, 0.2);
+}
+
+.link:focus{
+	background-color: hsla(160deg, 6%, 40%, 0.5);
+}
+
+.link .name {
+	padding-left: 12px;
+}
+
+.space-expand {
+	font-size: 90px;
+	flex-grow: 1;
+}
+
+.red {
+	border: 2px solid red;
+}
