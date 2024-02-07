@@ -1,4 +1,5 @@
 /* TODO: custom greenish selection color */
+/* nvm we just disable the selection all together sfkldj */
 
 :root, body {
 	background-color: #1d2021;
@@ -43,7 +44,8 @@ img.me {
 
 .links {
 	list-style-type: none;
-	padding-top: 35px;
+/*	padding-top: 35px;*/
+	padding: 35vh 0;
 }
 
 a.link {
@@ -65,7 +67,7 @@ a.link {
 }
 
 .link:focus{
-	background-color: hsla(160deg, 6%, 40%, 0.5);
+	background-color: hsla(160deg, 6%, 40%, 0.7);
 }
 
 img.icon {
@@ -99,30 +101,52 @@ img.icon {
 	.right {
 		flex: 1;
 	}
+	.pb {
+	--box-size: 50vw !important;
+	}
+	.circle {
+		top: calc(var(--box-size) - 60px) !important;
+	}
+	.circle.dragged {
+		top: var(--y) !important;
+	}
+	.circle.justrel {
+		scale: 1.1 !important;
+	}
+
+	.header {
+		top: 50%;
+		transform: translateY(-50%);
+		padding-top: 0;
+/*		pointer-events: none;*/
+	}
 }
 
-/*.header {
-	transition-duration: 300ms;
-}
-.header:hover {
-	transform-origin: top;
-	scale: 1.5;
-	transition-timing-function: cubic-bezier(.15,1.59,.30,.92);
+.me {
+	user-drag: none;
+	user-select: none;
+    -webkit-user-drag: none;
 }
 
-.titles {
-	transition: 300ms;
+.pb {
+	z-index: 3;
+	pointer-events: none;
+/*	border: 2px solid red;*/
 }
 
-.header:hover .titles {
-	transition: 200ms;
-	opacity: 0;
-	scale: 1.2;
-	transform-origin: top;
+.flow {
+	position: relative;
+	z-index: 4;
 }
 
-
-.me:active {
-	scale: 1.7;
+.link{
+/*	backdrop-filter: blur(3px);*/
 }
-*/
+
+* {
+	user-select: none;
+}
+
+.main {
+	min-height: 100vh;
+}
