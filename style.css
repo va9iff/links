@@ -5,6 +5,14 @@
 	background-color: #1d2021;
 }
 
+body {
+	/* disabled swipe down to reload */
+    /* overscroll-behavior-y: contain; */
+
+    /* even disables from left swipe right to go back or close*/
+    overscroll-behavior: contain;
+}
+
 * {
 	padding: 0;
 	margin: 0;
@@ -45,7 +53,7 @@ img.me {
 .links {
 	list-style-type: none;
 /*	padding-top: 35px;*/
-	padding: 35vh 0;
+	padding: 35px 0;
 }
 
 a.link {
@@ -54,6 +62,7 @@ a.link {
 	padding: 6px;
 	padding-right: 9px;
 	border-radius: 12px;
+/*	background: hsla(160deg, 6%, 40%, 0.2);*/
 	background: linear-gradient(to right, hsla(160deg, 6%, 40%, 0.2), hsl(160deg, 6%, 40%, 0) 80%);
 	transition: 200ms;
 	color: #EFD789;
@@ -112,6 +121,9 @@ img.icon {
 	}
 	.circle.justrel {
 		scale: 1.1 !important;
+	}
+	.links {
+		padding: 35vh 0;
 	}
 
 	.header {
